@@ -1,0 +1,10 @@
+coverage/
+dist/
+node_modules/
+app/foxit-lib/
+app/license-key.js
+
+# Cruft
+.DS_Store
+npm-debug.log
+.idea
