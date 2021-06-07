@@ -27,6 +27,15 @@ module.exports = options => ({
                 test: /\.css$/,
                 exclude: /node_modules/,
                 use: ["style-loader", "css-loader"]
+            },
+            {
+                test: /addon\.info\.json$/,
+                include: /foxit-lib/,
+                use: [{
+                    loader: 'babel-loader',
+                    options: options.babelLoaderOptions
+                }, '@foxitsoftware/addon-loader'],
+                type: 'javascript/auto'
             }
         ]
     },
@@ -50,5 +59,6 @@ module.exports = options => ({
     },
     devtool: options.devtool,
     target: "web",
+    externals: ['UIExtension', 'PDFViewCtrl'],
     performance: options.performance || {}
 });
