@@ -16,8 +16,6 @@ FoxitPDFSDK for Web provides a boilerplate project for React app which was creat
 │  │  └─PDFViewer/
 │  ├─containers/
 │  │  └─App/
-│  ├─foxit-lib/
-│  │    ├─...
 │  ├─app.js
 │  ├─index.html
 │  ├─preload.js
@@ -44,22 +42,24 @@ FoxitPDFSDK for Web provides a boilerplate project for React app which was creat
 ### Prerequisites
 
 - [Nodejs](https://nodejs.org/en/) and [npm](https://www.npmjs.com)
-- [FoxitPDFSDK for Web](https://developers.foxitsoftware.com/pdf-sdk/Web)
+- [FoxitPDFSDK for Web](https://www.npmjs.com/package/@foxitsoftware/foxit-pdf-sdk-for-web-library)
 
 ### Getting started
 
-Navigate to `root/integratons/react.js/`, and execute:
+Clone the repository to any location:
 
-```sh
-npm run setup
+```bash
+git clone git@github.com:foxitsoftware/FoxitPDFSDKForWeb-Reactjs-Example.git
 ```
 
-This setup will implement the followings:
+Navigate to `FoxitPDFSDKForWeb-Reactjs-Example/`, and execute:
 
-- `npm install` to install dependencies.
-- `npm run update-sdk`
-- Copy `lib` folder from the root folder to the `root/integratons/react.js/app/`, and auto rename it to `foxit-lib`.
-- Copy `root/examples/license-key.js`to the `root/integratons/react.js/app/`.
+```bash
+cd ./FoxitPDFSDKForWeb-Reactjs-Example
+npm install
+```
+
+This step will download all dependencies into `node_modules` folder.
 
 ### Referening Addons
 
@@ -109,24 +109,24 @@ Where `the_path_to_foxit_lib` is the SDK lib folder，
 3. In`components/PDFViewer/index.js`, import `addon.info.json` for each addon:
 
     ```js
-        import * as UIExtension from '../foxit-lib/UIExtension.full.js'
-        import filePropertyAddon from '../foxit-lib/uix-addons/file-property/addon.info.json';
-        import multiMediaAddon from '../foxit-lib/uix-addons/multi-media/addon.info.json';
-        import passwordProtectAddon from '../foxit-lib/uix-addons/password-protect/addon.info.json';
-        import redactionAddon from '../foxit-lib/uix-addons/redaction/addon.info.json';
-        import pathObjectsAddon from '../foxit-lib/uix-addons/path-objects/addon.info.json';
-        import printAddon from '../foxit-lib/uix-addons/print/addon.info.json';
-        import fullScreenAddon from '../foxit-lib/uix-addons/full-screen/addon.info.json';
-        import importFormAddon from '../foxit-lib/uix-addons/import-form/addon.info.json';
-        import exportFormAddon from '../foxit-lib/uix-addons/export-form/addon.info.json';
-        import undoRedoAddon from '../foxit-lib/uix-addons/undo-redo/addon.info.json';
-        import textObjectAddon from '../foxit-lib/uix-addons/text-object/addon.info.json';
+        import * as UIExtension from '@foxitsoftware/foxit-pdf-sdk-for-web-library'
+        import filePropertyAddon from '@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/uix-addons/file-property/addon.info.json';
+        import multiMediaAddon from '@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/uix-addons/multi-media/addon.info.json';
+        import passwordProtectAddon from '@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/uix-addons/password-protect/addon.info.json';
+        import redactionAddon from '@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/uix-addons/redaction/addon.info.json';
+        import pathObjectsAddon from '@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/uix-addons/path-objects/addon.info.json';
+        import printAddon from '@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/uix-addons/print/addon.info.json';
+        import fullScreenAddon from '@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/uix-addons/full-screen/addon.info.json';
+        import importFormAddon from '@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/uix-addons/import-form/addon.info.json';
+        import exportFormAddon from '@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/uix-addons/export-form/addon.info.json';
+        import undoRedoAddon from '@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/uix-addons/undo-redo/addon.info.json';
+        import textObjectAddon from '@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/uix-addons/text-object/addon.info.json';
     ```
 
      And pass addons to the PDFUI constructor:
 
     ```js
-    const libPath = '/foxit-lib/';
+        const libPath = '/foxit-lib/';
         this.pdfui = new UIExtension.PDFUI({
             addons: [
                 filePropertyAddon,
@@ -151,12 +151,12 @@ Where `the_path_to_foxit_lib` is the SDK lib folder，
 
 #### 3. Reference allInOne.js
 
-The allInOne.js already combines all addons, which locates in `foxit-lib/uix-addons/`. To refenece this file, open `components/PDFViewer/index.js`, and update the code as follows:
+The allInOne.js already combines all addons, which locates in `@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/uix-addons/`. To refenece this file, open `components/PDFViewer/index.js`, and update the code as follows:
 
 ```js
 // ...
-import * as UIExtension from '../foxit-lib/UIExtension.full.js';
-import * as Addons from '../foxit-lib/uix-addons/allInOne.js';
+import * as UIExtension from '@foxitsoftware/foxit-pdf-sdk-for-web-library';
+import * as Addons from '@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/uix-addons/allInOne.js';
 // ...
 ```
 
@@ -213,41 +213,41 @@ This integration assumes you have React app created with Webpack and Babel.
 
 - [Nodejs](https://nodejs.org/en/) and [npm](https://www.npmjs.com)
 - [Reac.js created with WebPack and Babel](https://dev.to/iamismile/how-to-setup-webpack-and-babel-for-react-59ph)
-- [FoxitPDFSDK for Web](https://developers.foxitsoftware.com/pdf-sdk/Web)
+- [FoxitPDFSDK for Web](https://www.npmjs.com/package/@foxitsoftware/foxit-pdf-sdk-for-web-library)
 
 ### Webpack configuration
 
 Let's call the root folder of your existing React project and `FoxitPDFSDK for Web` as ReactJS and SDK.
 
-1. Create and configure the following 3 files in the `ReactJS/development/webpacK`folder:
+1. Create and configure the following 3 files in the `ReactJS/development/webpack` folder:
 
    - `webpack.base.js`
    - `webpack.dev.js`
    - `webpack.prod.js`
 
-   For the configuration details, refer to the counterpart files in `SDK/integrations/react.js/development/webpack/`. You can also directly duplicate the files to `ReactJS/development/webpacK`
+   For the configuration details, refer to the counterpart files in <https://github.com/foxitsoftware/FoxitPDFSDKForWeb-Reactjs-Example/tree/master/development/webpack>. You can also directly duplicate the files to `ReactJS/development/webpack`
 
 2. Configure npm script in package.json
 
-```json
-"script": {
-"start": "webpack-dev-server --config development/webpack/webpack.dev.js",
-"build": "webpack --config development/webpack/webpack.prod.js"
-}
-```
+    ```json
+        "script": {
+            "start": "webpack-dev-server --config development/webpack/webpack.dev.js",
+            "build": "webpack --config development/webpack/webpack.prod.js"
+        }
+    ```
 
 ### Adding dependencies and entry point files
 
-1. In SDK, copy the `lib` and `SDK/examples/license-key.js`to `ReacJS/app`, and change the lib name to `foxi-lib`. Besides, to correctly referene your fonts lib, you also need to duplicate the `external` folder inside SDK to `ReactJS/app/foxit-lib/assets`.
-
-2. Create and configure the following files in ReacJS:
+1. Install `@foxitsoftware/foxit-pdf-sdk-for-web-library`
+2. Copy the `license-key.js` to `ReacJS/app`
+3. Create and configure the following files in ReacJS:
 
    - the [babel.config.js](https://www.npmjs.com/package/@babel/preset-react)
    - the `../app/components/PDFViewer/index.js`
    - the `../app/containers/App/index.js`
    - the `index.htm`,`app.js` and `preload.js` inside `../app/`
 
-   For the configuration details, refer to the corresponding files in SDK. You can also directly duplicate those files into the counterpart folders in ReactJS.
+   For the configuration details, refer to the corresponding files in <https://github.com/foxitsoftware/FoxitPDFSDKForWeb-ReactJS-Example>. You can also directly duplicate those files into the counterpart folders in ReactJS.
 
 ### Running your application
 
@@ -256,45 +256,3 @@ npm run start
 ```
 
 Now everything is set up. Open your browser, navigate to <http://127.0.0.1:9102/> to launch your application.
-
-### Details install
-
-1. Define your project path to be an environment variable like bellow:
-
-    ```bash
-    # add your environment varaible to your syspath on windows or ~/.bashrc on macos/linux
-    export PROJECT_PATH="$HOME/wkspc/FoxitPDFSDKForWeb"
-
-    # then reboot or source your config files to make it works
-    ```
-
-2. Change directory to your `$PROJECT_PATH`, and build your latest source code like
-
-    ```bash
-    cd $PROJECT_PATH
-    git pull
-    npm run build
-    ```
-
-3. Copy the `lib` and `SDK/examples/license-key.js`to `ReacJS/app`
-
-    ```bash
-    cp -R lib/ $PROJECT_PATH/integrations/react.js/app/foxit-lib
-    cp examples/license-key.js $PROJECT_PATH/integrations/react.js/app/
-    ```
-
-4. copy the `external`directory to `foxit-lib/assets`
-
-    ```bash
-    cp -R external/ $PROJECT_PATH/integrations/react.js/app/foxit-lib/assets
-    ```
-
-5. install your `node_modules` and run
-
-    ```bash
-    cd $PROJECT_PATH/integrations/react.js/
-    npm install
-    npm run start
-    ```
-
-6. Now everything is set up. Open your browser, navigate to <http://127.0.0.1:9102/> to launch your application.

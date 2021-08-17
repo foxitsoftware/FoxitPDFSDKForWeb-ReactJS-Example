@@ -3,9 +3,7 @@
     "version": "0.1.0",
     "description": "",
     "scripts": {
-        "setup": "npm i ",
-        "postsetup": "npm run update-sdk",
-        "update-sdk": "node development/setup",
+        "postinstall": "npm i -S @foxitsoftware/foxit-pdf-sdk-for-web-library",
         "start": "webpack-dev-server --config development/webpack/webpack.dev.js",
         "build": "webpack --config development/webpack/webpack.prod.js"
     },

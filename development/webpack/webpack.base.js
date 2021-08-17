@@ -17,7 +17,7 @@ module.exports = options => ({
         rules: [
             {
                 test: /\.jsx?$/,
-                exclude: /node_modules|foxit-lib/,
+                exclude: /node_modules/,
                 use: {
                     loader: "babel-loader",
                     options: options.babelLoaderOptions
@@ -42,7 +42,7 @@ module.exports = options => ({
     plugins: options.plugins.concat([
         new CopyWebpackPlugin([
             {
-                from: "app/foxit-lib/",
+                from: "./node_modules/@foxitsoftware/foxit-pdf-sdk-for-web-library",
                 to: "foxit-lib",
                 force: true,
                 ignore: [

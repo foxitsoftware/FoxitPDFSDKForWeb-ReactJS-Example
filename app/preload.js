@@ -1,4 +1,4 @@
-import preloadJrWorker from './foxit-lib/preload-jr-worker';
+import preloadJrWorker from '@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/preload-jr-worker';
 import { licenseKey, licenseSN } from './license-key';
 
 window.readyWorker = preloadJrWorker({
