@@ -6,7 +6,7 @@ This guide shows two examples. One introduces how to quickly run the out-of=the-
 
 _Note:The root folder of `FoxitPDFSDK for Web` is referred as `root` in the following._
 
-FoxitPDFSDK for Web provides a boilerplate project for React app which was created with WebPack and Babel. This example can be found at `root/integrations/` inside FoxitPDFSDK for Web package.
+FoxitPDFSDK for Web provides a boilerplate project for React app which was created with WebPack and Babel.
 
 ### Overview the project structure
 
@@ -23,7 +23,6 @@ FoxitPDFSDK for Web provides a boilerplate project for React app which was creat
 ├─development/
 │  ├─webpack/
 │  │    ├─...
-│  └─setup.js
 ├─package.json
 ├─babel.config.js
 ```
@@ -63,7 +62,7 @@ This step will download all dependencies into `node_modules` folder.
 
 ### Referening Addons
 
-If you are integrating FoxitPDFSDK for Web into your existing React project, you should read this section before continue. You may want to check out [Addons](../addons/introduction.md) for detailed introductions.
+If you are integrating FoxitPDFSDK for Web into your existing React project, you should read this section before continue. You may want to check out [Addons](http://webviewer-demo.foxitsoftware.com/docs/developer-guide/ui-extension/addons/introduction.html) for detailed introductions.
 
 Here we introduce three ways to reference SDK addons for Anguar project, you may choose one of them based on your needs. This [Comparison](#Addons reference methods comparison) will help you to better understand the difference of the three ways and make a choice.
 
@@ -199,7 +198,7 @@ this.pdfui = new UIExtension.PDFUI({
 |Modularized|Configure gulp|0|Yes,but should re-merge the addons after modification |
 |allInOne.js|No|1|No|
 
-Note: You can rebuild allInOne.js by using our [Addons merge tools](../addons/introduction.html#how-to-merge-addons)
+Note: You can rebuild allInOne.js by using our [Addons merge tools](http://webviewer-demo.foxitsoftware.com/docs/developer-guide/ui-extension/addons/introduction.html#merge-addons)
 
 ### Runnning the example
 
