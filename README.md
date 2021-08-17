@@ -149,7 +149,6 @@ Where `the_path_to_foxit_lib` is the SDK lib folder，
                 exportFormAddon,
                 undoRedoAddon,
                 thumbnailAddon,
-                formDesignerAddon,
                 formToSheetAddon,
                 readAloudAddon,
                 hContinuesAddon,
@@ -158,10 +157,13 @@ Where `the_path_to_foxit_lib` is the SDK lib folder，
                 xfaFormAddon,
                 pageTemplateAddon
             ].concat(
-                // text-object addon is disabled on mobile platform
+                // text-object and form-designer addon is disabled on mobile platform
                 UIExtension.PDFViewCtrl.DeviceInfo.isMobile
                     ? []
-                    : textObjectAddon
+                    : [
+                        textObjectAddon, 
+                        formDesignerAddon
+                    ]
             ),
             // other options
         });

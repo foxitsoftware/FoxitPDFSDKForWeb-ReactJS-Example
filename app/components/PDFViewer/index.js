@@ -62,7 +62,6 @@ export default class PDFViewer extends React.Component {
                 exportFormAddon,
                 undoRedoAddon,
                 thumbnailAddon,
-                formDesignerAddon,
                 formToSheetAddon,
                 readAloudAddon,
                 hContinuesAddon,
@@ -73,7 +72,10 @@ export default class PDFViewer extends React.Component {
             ].concat(
                 UIExtension.PDFViewCtrl.DeviceInfo.isMobile
                     ? []
-                    : textObjectAddon
+                    : [
+                        textObjectAddon, 
+                        formDesignerAddon
+                    ]
             )
         });
     }
