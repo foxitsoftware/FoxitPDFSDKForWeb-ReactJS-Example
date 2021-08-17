@@ -25,12 +25,10 @@ module.exports = options => ({
             },
             {
                 test: /\.css$/,
-                exclude: /node_modules/,
                 use: ["style-loader", "css-loader"]
             },
             {
                 test: /addon\.info\.json$/,
-                include: /foxit-lib/,
                 use: [{
                     loader: 'babel-loader',
                     options: options.babelLoaderOptions
@@ -42,7 +40,7 @@ module.exports = options => ({
     plugins: options.plugins.concat([
         new CopyWebpackPlugin([
             {
-                from: "./node_modules/@foxitsoftware/foxit-pdf-sdk-for-web-library",
+                from: "./node_modules/@foxitsoftware/foxit-pdf-sdk-for-web-library/lib",
                 to: "foxit-lib",
                 force: true,
                 ignore: [

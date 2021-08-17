@@ -13,6 +13,14 @@ import importFormAddon from '@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/ui
 import exportFormAddon from '@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/uix-addons/export-form/addon.info.json';
 import undoRedoAddon from '@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/uix-addons/undo-redo/addon.info.json';
 import textObjectAddon from '@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/uix-addons/text-object/addon.info.json';
+import thumbnailAddon from '@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/uix-addons/thumbnail/addon.info.json';
+import formDesignerAddon from '@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/uix-addons/form-designer/addon.info.json';
+import formToSheetAddon from '@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/uix-addons/form-to-sheet/addon.info.json';
+import readAloudAddon from '@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/uix-addons/read-aloud/addon.info.json';
+import hContinuesAddon from '@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/uix-addons/h-continuous/addon.info.json';
+import RecognitionFormAddon from '@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/uix-addons/recognition-form/addon.info.json';
+import pageTemplateAddon from '@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/uix-addons/page-template/addon.info.json';
+import xfaFormAddon from '@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/uix-addons/xfa-form/addon.info.json';
 
 import "@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/UIExtension.css";
 
@@ -53,7 +61,15 @@ export default class PDFViewer extends React.Component {
                 importFormAddon,
                 exportFormAddon,
                 undoRedoAddon,
-                thumbnailAddon
+                thumbnailAddon,
+                formDesignerAddon,
+                formToSheetAddon,
+                readAloudAddon,
+                hContinuesAddon,
+                RecognitionFormAddon,
+                pageTemplateAddon,
+                xfaFormAddon,
+                pageTemplateAddon
             ].concat(
                 UIExtension.PDFViewCtrl.DeviceInfo.isMobile
                     ? []

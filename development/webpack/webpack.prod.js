@@ -5,7 +5,7 @@ module.exports = require("./webpack.base")({
     mode: "production",
 
     entry: {
-        adaptive: path.resolve("app/foxit-lib/adaptive.js"),
+        adaptive: path.resolve("node_modules/@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/adaptive.js"),,
         preload: path.resolve("app/preload.js"),
         main: [
             require.resolve("react-app-polyfill/ie9"),
