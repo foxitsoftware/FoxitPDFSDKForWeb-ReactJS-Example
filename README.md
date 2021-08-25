@@ -237,7 +237,7 @@ This integration assumes you have React app created with Webpack and Babel.
 
 - [Nodejs](https://nodejs.org/en/) and [npm](https://www.npmjs.com)
 - [Reac.js created with WebPack and Babel](https://dev.to/iamismile/how-to-setup-webpack-and-babel-for-react-59ph)
-- [FoxitPDFSDK for Web](https://www.npmjs.com/package/@foxitsoftware/foxit-pdf-sdk-for-web-library)
+- [FoxitPDFSDK for Web](https://developers.foxit.com/products/web/)
 
 ### Webpack configuration
 
