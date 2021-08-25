@@ -41,7 +41,7 @@ FoxitPDFSDK for Web provides a boilerplate project for React app which was creat
 ### Prerequisites
 
 - [Nodejs](https://nodejs.org/en/) and [npm](https://www.npmjs.com)
-- [FoxitPDFSDK for Web](https://www.npmjs.com/package/@foxitsoftware/foxit-pdf-sdk-for-web-library)
+- [FoxitPDFSDK for Web](https://developers.foxit.com/products/web/)
 
 ### Getting started
 
@@ -59,6 +59,11 @@ npm install
 ```
 
 This step will download all dependencies into `node_modules` folder.
+
+
+### Reference the fonts
+
+If some text in a PDF document requires a specified font to be rendered correctly, you need to specify a font loading path during initialization. In this example, you can refer to the `fontPath` configuration in `app/preload.js`. What we need to do is to copy the `external` folder in the SDK to the `app/assets` folder so that the special font can be rendered normally.
 
 ### Referening Addons
 
@@ -267,6 +272,8 @@ Let's call the root folder of your existing React project and `FoxitPDFSDK for W
    - the `index.htm`,`app.js` and `preload.js` inside `../app/`
 
    For the configuration details, refer to the corresponding files in <https://github.com/foxitsoftware/FoxitPDFSDKForWeb-ReactJS-Example>. You can also directly duplicate those files into the counterpart folders in ReactJS.
+
+Besides, to correctly referene your fonts lib, you also need to duplicate the `external` folder inside SDK to `ReactJS/app/foxit-lib/assets`.
 
 ### Running your application
 

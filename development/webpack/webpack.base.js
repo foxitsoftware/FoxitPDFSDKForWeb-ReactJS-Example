@@ -47,6 +47,11 @@ module.exports = options => ({
                     "{PDFViewCtrl,UIExtension}*.js",
                     "preload-jr-worker.js"
                 ]
+            },
+            {
+                from: './app/assets',
+                to: './',
+                force: true
             }
         ])
     ]),
