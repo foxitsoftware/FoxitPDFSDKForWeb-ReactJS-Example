@@ -48,7 +48,7 @@ FoxitPDFSDK for Web provides a boilerplate project for React app which was creat
 Clone the repository to any location:
 
 ```bash
-git clone git@github.com:foxitsoftware/FoxitPDFSDKForWeb-Reactjs-Example.git
+git clone https://github.com/foxitsoftware/FoxitPDFSDKForWeb-ReactJS-Example.git
 ```
 
 Navigate to `FoxitPDFSDKForWeb-Reactjs-Example/`, and execute:
