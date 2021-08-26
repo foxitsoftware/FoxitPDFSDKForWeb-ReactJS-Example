@@ -263,7 +263,12 @@ Let's call the root folder of your existing React project and `FoxitPDFSDK for W
 
 ### Adding dependencies and entry point files
 
-1. Install `@foxitsoftware/foxit-pdf-sdk-for-web-library`
+1. Install the lattest version of `@foxitsoftware/foxit-pdf-sdk-for-web-library`.
+
+   ```bash
+   npm i -S @foxitsoftware/foxit-pdf-sdk-for-web-library
+   ```
+
 2. Copy the `license-key.js` to `ReacJS/app`
 3. Create and configure the following files in ReacJS:
 
