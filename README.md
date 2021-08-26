@@ -60,6 +60,7 @@ npm install
 
 This step will download all dependencies into `node_modules` folder.
 
+Place the `license-key.js` into `ReacJS/app`. You can find the license information at `SDK/examples/`
 
 ### Reference the fonts
 
