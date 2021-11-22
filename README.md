@@ -275,11 +275,11 @@ Let's call the root folder of your existing React project and `FoxitPDFSDK for W
    - the [babel.config.js](https://www.npmjs.com/package/@babel/preset-react)
    - the `../app/components/PDFViewer/index.js`
    - the `../app/containers/App/index.js`
-   - the `index.htm`,`app.js` and `preload.js` inside `../app/`
+   - the `index.html`,`app.js` and `preload.js` inside `../app/`
 
    For the configuration details, refer to the corresponding files in <https://github.com/foxitsoftware/FoxitPDFSDKForWeb-ReactJS-Example>. You can also directly duplicate those files into the counterpart folders in ReactJS.
 
-Besides, to correctly referene your fonts lib, you also need to duplicate the `external` folder inside SDK to `ReactJS/app/foxit-lib/assets`.
+Besides, to correctly referene your fonts lib, you also need to duplicate the `external` folder inside SDK to `ReactJS/app/assets`.
 
 ### Running your application
 
