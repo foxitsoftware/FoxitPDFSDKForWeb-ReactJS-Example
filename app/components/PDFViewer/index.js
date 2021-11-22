@@ -49,7 +49,6 @@ export default class PDFViewer extends React.Component {
                 }
             },
             renderTo: element,
-            appearance: UIExtension.appearances.adaptive,
             addons: [
                 filePropertyAddon,
                 multiMediaAddon,

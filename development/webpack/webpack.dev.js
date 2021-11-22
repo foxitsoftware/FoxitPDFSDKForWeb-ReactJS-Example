@@ -6,7 +6,6 @@ module.exports = require("./webpack.base")({
     mode: "development",
 
     entry: {
-        adaptive: path.resolve("node_modules/@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/adaptive.js"),
         preload: path.resolve("app/preload.js"),
         main: [
             require.resolve("react-app-polyfill/ie9"),
@@ -28,7 +27,7 @@ module.exports = require("./webpack.base")({
         new HtmlWebpackPlugin({
             inject: true,
             template: "app/index.html",
-            chunks: ["adaptive", "preload", "main"]
+            chunks: ["preload", "main"]
         })
     ]
 });
