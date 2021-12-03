@@ -269,8 +269,14 @@ Let's call the root folder of your existing React project and `FoxitPDFSDK for W
    npm i -S @foxitsoftware/foxit-pdf-sdk-for-web-library
    ```
 
-2. Copy the `license-key.js` to `ReacJS/app`
-3. Create and configure the following files in ReacJS:
+2. Install the `@foxitsoftware/addon-loader`
+
+    ```bash
+    npm i -D @foxitsoftware/addon-loader
+    ```
+
+3. Copy the `license-key.js` to `ReacJS/app`
+4. Create and configure the following files in ReacJS:
 
    - the [babel.config.js](https://www.npmjs.com/package/@babel/preset-react)
    - the `../app/components/PDFViewer/index.js`
