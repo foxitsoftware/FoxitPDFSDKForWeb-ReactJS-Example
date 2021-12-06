@@ -102,7 +102,6 @@ Where `the_path_to_foxit_lib` is the SDK lib folder，
     ```js
     {
         test: /addon\.info\.json$/,
-        include: /foxit-lib/,
         use: [{
             loader: 'babel-loader',
             options: options.babelLoaderOptions
