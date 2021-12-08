@@ -293,6 +293,7 @@ Let's call the root folder of your existing React project and `FoxitPDFSDK for W
    For the configuration details, refer to the corresponding files in <https://github.com/foxitsoftware/FoxitPDFSDKForWeb-ReactJS-Example>. You can also directly duplicate those files into the counterpart folders in ReactJS.
 
 Besides, to correctly referene your fonts lib, you also need to duplicate the `external` folder inside SDK to `./app/assets`.
+
 5. Install React:
    - `npm install react react-dom`
 6. Install & Configure Babel
