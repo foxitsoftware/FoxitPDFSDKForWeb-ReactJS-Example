@@ -243,7 +243,15 @@ This integration assumes you have React app created with Webpack and Babel.
 
 Let's call the root folder of your existing React project and `FoxitPDFSDK for Web` as ReactJS and SDK.
 
-1. Create and configure the following 3 files in the `ReactJS/development/webpack` folder:
+1. Setup Webpack and Babel for our React app
+   - `mkdir my-react-app`
+   - `cd my-react-app`
+   - `mkdir app development`
+2. Initialize the project by running
+   - `npm init -y`
+3. Install Webpack & React
+   - `npm install webpack webpack-cli --save-dev`   
+4. Create and configure the following 3 files in the `ReactJS/development/webpack` folder:
 
    - `webpack.base.js`
    - `webpack.dev.js`
@@ -285,7 +293,15 @@ Let's call the root folder of your existing React project and `FoxitPDFSDK for W
    For the configuration details, refer to the corresponding files in <https://github.com/foxitsoftware/FoxitPDFSDKForWeb-ReactJS-Example>. You can also directly duplicate those files into the counterpart folders in ReactJS.
 
 Besides, to correctly referene your fonts lib, you also need to duplicate the `external` folder inside SDK to `ReactJS/app/assets`.
-
+5. Install React:
+	- `npm install react react-dom`
+6. Install & Configure Babel
+	- `npm install @babel/core @babel/preset-env @babel/preset-react babel-loader --save-dev`    
+7. Install DevServer& webpack plugin:
+	- `npm install webpack-dev-server html-webpack-plugin copy-webpack-plugin --save-dev`
+	- `npm install react-app-polyfill babel-plugin-styled-components`
+	- `npm install css-loader style-loader --save-dev`
+	- `npm install styled-components --save-dev`
 ### Running your application
 
 ```sh
