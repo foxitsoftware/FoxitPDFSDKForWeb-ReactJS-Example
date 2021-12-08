@@ -38,23 +38,27 @@ module.exports = options => ({
         ]
     },
     plugins: options.plugins.concat([
-        new CopyWebpackPlugin([
+        new CopyWebpackPlugin({
+            patterns:[
             {
                 from: "./node_modules/@foxitsoftware/foxit-pdf-sdk-for-web-library/lib",
                 to: "foxit-lib",
                 force: true,
-                ignore: [
-                    "{PDFViewCtrl,UIExtension}.js",
-                    "{PDFViewCtrl,UIExtension}.{vendor,polyfills}.js",
-                    "preload-jr-worker.js"
-                ]
+                globOptions: {
+                    ignore: [
+                        "{PDFViewCtrl,UIExtension}*.js",
+                        "preload-jr-worker.js"
+                    ]
+                }
+                
             },
             {
                 from: './app/assets',
                 to: './',
                 force: true
             }
-        ])
+        ]
+        })
     ]),
     resolve: {
         modules: ["node_modules", "app"],
