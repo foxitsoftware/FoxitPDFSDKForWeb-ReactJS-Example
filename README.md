@@ -259,10 +259,10 @@ Let's call the root folder of your existing React project and `FoxitPDFSDK for W
 
    For the configuration details, refer to the counterpart files in <https://github.com/foxitsoftware/FoxitPDFSDKForWeb-Reactjs-Example/tree/master/development/webpack>. You can also directly duplicate the files to `./development/webpack`
 
-2. Configure npm script in package.json
+2. Configure npm scripts in package.json
 
     ```json
-        "script": {
+        "scripts": {
             "start": "webpack-dev-server --config development/webpack/webpack.dev.js",
             "build": "webpack --config development/webpack/webpack.prod.js"
         }
