@@ -250,7 +250,7 @@ Let's call the root folder of your existing React project and `FoxitPDFSDK for W
 2. Initialize the project by running
    - `npm init -y`
 3. Install Webpack & React
-   - `npm install webpack webpack-cli --save-dev`   
+   - `npm install webpack webpack-cli terser-webpack-plugin --save-dev`   
 4. Create and configure the following 3 files in the `./development/webpack` folder:
 
    - `webpack.base.js`
