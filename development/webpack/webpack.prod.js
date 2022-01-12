@@ -35,7 +35,7 @@ module.exports = require("./webpack.base")({
                 removeEmptyAttributes: true,
                 removeStyleLinkTypeAttributes: true,
                 keepClosingSlash: true,
-                minifyJS: false,
+                minifyJS: true,
                 minifyCSS: true,
                 minifyURLs: true
             },
