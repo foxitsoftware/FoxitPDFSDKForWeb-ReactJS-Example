@@ -1,9 +1,17 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const TerserWebpackPlugin = require("terser-webpack-plugin");
 
 module.exports = require("./webpack.base")({
     mode: "production",
-
+    optimization: {
+        minimize: true,
+        minimizer: [
+            new TerserWebpackPlugin({
+                exclude: /foxit-lib/
+            })
+        ]
+    },
     entry: {
         preload: path.resolve("app/preload.js"),
         main: [
@@ -13,7 +21,7 @@ module.exports = require("./webpack.base")({
     },
 
     output: {
-        filename: "[name].[hash].js"
+        filename: "[name].[contenthash].js"
     },
 
     plugins: [
