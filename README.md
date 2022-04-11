@@ -56,7 +56,6 @@ Navigate to `FoxitPDFSDKForWeb-Reactjs-Example/`, and execute:
 ```bash
 cd ./FoxitPDFSDKForWeb-Reactjs-Example
 npm install
-npm install -S @foxitsoftware/foxit-pdf-sdk-for-web-library@latest
 ```
 
 This step will download all dependencies into `node_modules` folder.
