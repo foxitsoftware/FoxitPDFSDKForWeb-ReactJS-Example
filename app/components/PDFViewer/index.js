@@ -21,6 +21,7 @@ import hContinuesAddon from '@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/ui
 import RecognitionFormAddon from '@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/uix-addons/recognition-form/addon.info.json';
 import pageTemplateAddon from '@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/uix-addons/page-template/addon.info.json';
 import xfaFormAddon from '@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/uix-addons/xfa-form/addon.info.json';
+import rangeInputAddon from '@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/uix-addons/range-input/addon.info.json';
 
 import "@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/UIExtension.css";
 
@@ -67,7 +68,8 @@ export default class PDFViewer extends React.Component {
                 RecognitionFormAddon,
                 pageTemplateAddon,
                 xfaFormAddon,
-                pageTemplateAddon
+                pageTemplateAddon,
+                rangeInputAddon
             ].concat(
                 UIExtension.PDFViewCtrl.DeviceInfo.isMobile
                     ? []
