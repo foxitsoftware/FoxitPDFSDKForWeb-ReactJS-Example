@@ -70,7 +70,8 @@ If some text in a PDF document requires a specified font to be rendered correctl
 
 If you are integrating FoxitPDFSDK for Web into your existing React project, you should read this section before continue. You may want to check out [Addons](http://webviewer-demo.foxitsoftware.com/docs/developer-guide/ui-extension/addons/introduction.html) for detailed introductions.
 
-Here we introduce three ways to reference SDK addons for Anguar project, you may choose one of them based on your needs. This [Comparison](#Addons reference methods comparison) will help you to better understand the difference of the three ways and make a choice.
+Here we introduce three ways to reference SDK addons for Anguar project, you may choose one of them based on your needs. This [Comparison](#Addons reference methods comparison) will help you to better understand the difference of the three ways and make a choice.If you need to run multiple instances, see the third method.
+
 
 #### 1. Reference fragmented addons
 
