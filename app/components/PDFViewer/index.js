@@ -68,7 +68,6 @@ export default class PDFViewer extends React.Component {
                 RecognitionFormAddon,
                 pageTemplateAddon,
                 xfaFormAddon,
-                pageTemplateAddon,
                 rangeInputAddon
             ].concat(
                 UIExtension.PDFViewCtrl.DeviceInfo.isMobile
