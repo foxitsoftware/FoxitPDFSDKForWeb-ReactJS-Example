@@ -159,8 +159,7 @@ Where `the_path_to_foxit_lib` is the SDK lib folder，
                 hContinuesAddon,
                 RecognitionFormAddon,
                 pageTemplateAddon,
-                xfaFormAddon,
-                pageTemplateAddon
+                xfaFormAddon
             ].concat(
                 // text-object and form-designer addon is disabled on mobile platform
                 UIExtension.PDFViewCtrl.DeviceInfo.isMobile
