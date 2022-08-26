@@ -1,6 +1,7 @@
 import React from "react";
 import StyledComponents from 'styled-components';
 import * as UIExtension from '@foxitsoftware/foxit-pdf-sdk-for-web-library'
+import "@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/UIExtension.css";
 
 import filePropertyAddon from '@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/uix-addons/file-property/addon.info.json';
 import multiMediaAddon from '@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/uix-addons/multi-media/addon.info.json';
@@ -23,7 +24,6 @@ import pageTemplateAddon from '@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/
 import xfaFormAddon from '@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/uix-addons/xfa-form/addon.info.json';
 import rangeInputAddon from '@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/uix-addons/range-input/addon.info.json';
 
-import "@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/UIExtension.css";
 
 const StyledDiv = StyledComponents.div`
     height: 100%;
@@ -68,7 +68,8 @@ export default class PDFViewer extends React.Component {
                 RecognitionFormAddon,
                 pageTemplateAddon,
                 xfaFormAddon,
-                rangeInputAddon
+                rangeInputAddon,
+                compareAddon
             ].concat(
                 UIExtension.PDFViewCtrl.DeviceInfo.isMobile
                     ? []
