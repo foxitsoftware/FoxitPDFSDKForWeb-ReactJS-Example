@@ -14,7 +14,7 @@ export default class PDFViewer extends React.Component {
     }
 
     render() {
-        return <StyledDiv ref={this.elementRef} />;
+        return <StyledDiv id="pdf-ui" ref={this.elementRef} />;
     }
 
     componentDidMount() {
