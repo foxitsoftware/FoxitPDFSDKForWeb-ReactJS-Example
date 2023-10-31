@@ -295,7 +295,8 @@ Let's call the root folder of your existing React project and `FoxitPDFSDK for W
 Besides, to correctly referene your fonts lib, you also need to duplicate the `external` folder inside SDK to `./app/assets`.
 
 5. Install React:
-   - `npm install react react-dom`
+   - `npm install react@17.0.2`
+   - `npm install react-dom@17.0.2`
 6. Install & Configure Babel
    - `npm install @babel/core @babel/preset-env @babel/preset-react babel-loader --save-dev`    
 7. Install DevServer& webpack plugin:
