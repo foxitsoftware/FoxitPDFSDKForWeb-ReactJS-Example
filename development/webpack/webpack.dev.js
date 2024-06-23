@@ -14,7 +14,10 @@ module.exports = require("./webpack.base")({
     },
 
     devServer: {
-        port: 9102
+        port: 9102,
+        headers: {
+            'Service-Worker-Allowed': '/'
+        }
     },
 
     output: {

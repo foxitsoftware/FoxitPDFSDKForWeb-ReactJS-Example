@@ -25,11 +25,6 @@ export default class PDFViewer extends React.Component {
                 libPath,
                 jr: {
                     readyWorker: window.readyWorker
-                },
-                messageSyncServiceWorker: {
-                    options:{
-                        scope: '/foxit-lib/'
-                    }
                 }
             },
             renderTo: element,
