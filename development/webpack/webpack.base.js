@@ -16,6 +16,12 @@ module.exports = options => ({
     module: {
         rules: [
             {
+                test: /[\\/]uix-addons[\\/].+[\\/]index\.js$/,
+                parser: {
+                    amd: false
+                }
+            },
+            {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,
                 use: {
