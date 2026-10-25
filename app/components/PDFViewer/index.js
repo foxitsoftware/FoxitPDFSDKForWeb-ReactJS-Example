@@ -32,8 +32,10 @@ export default class PDFViewer extends React.Component {
                 '/foxit-lib/uix-addons/allInOne.mobile.js':
                 '/foxit-lib/uix-addons/allInOne.js'
         });
+        window.pdfui = this.pdfui;
     }
     componentWillUnmount() {
         this.pdfui.destroy();
+        window.pdfui = null;
     }
 }
